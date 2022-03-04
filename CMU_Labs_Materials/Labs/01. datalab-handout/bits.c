@@ -20,7 +20,7 @@
  * STEP 1: Read the following instructions carefully.
  */
 
-You will provide your solution to the Data Lab by
+You will provide your solution to the Data Lab bysudo apt-get install gcc-multilib
 editing the collection of functions in this source file.
 
 INTEGER CODING RULES:
@@ -143,6 +143,7 @@ NOTES:
  *   Rating: 1
  */
 int bitXor(int x, int y) {
+  //Correct
   int a = (x & y);
   int b = (~x & ~y);
   return ((~a) & (~b));
@@ -154,6 +155,7 @@ int bitXor(int x, int y) {
  *   Rating: 1
  */
 int tmin(void) {
+  //Correct
   return (1 << 31);
 }
 //2
@@ -165,7 +167,8 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
-  return ~(1 << 31);
+  //Correct
+  return !(x ^ ~(1 << 31));
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -178,6 +181,7 @@ int isTmax(int x) {
 int allOddBits(int x) {
   //For odd test, use (0xAAAAAAAA) => because they will have to return (0xAAAAAAAA)
   //For even test, use (0x55555555) => because they will have to return (0x55555555)
+  //Correct
   int mask = 0xAAAAAAAA;
   int test_result = (x & (mask));
   return !(test_result ^ mask);
@@ -190,6 +194,7 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
+  //Correct
   return (~x + 1);
 }
 //3
@@ -203,24 +208,26 @@ int negate(int x) {
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  int first_digit_check = !((x >> 4) ^ 0x3); //check if the first digit is 3 
-  int second_digit_check = (!( ((x << 28) >> 28) ^ 0x0) || !( ((x << 28) >> 28) ^ 0x1) || !( ((x << 28) >> 28) ^ 0x2) || !( ((x << 28) >> 28) ^ 0x3) || !( ((x << 28) >> 28) ^ 0x4) || !( ((x << 28) >> 28) ^ 0x5) || !( ((x << 28) >> 28) ^ 0x6) || !( ((x << 28) >> 28) ^ 0x7) || !( ((x << 28) >> 28) ^ 0x8) || !( ((x << 28) >> 28) ^ 0x9));
-  return first_digit_check & second_digit_check;
+    //Also correct, but brute force
+    int first_digit_check = !((x >> 4) ^ 0x3); //check if the first digit is 3 
+    int second_digit_check = (!(( x & (0xF)) ^ 0x0) || !(( x & (0xF)) ^ 0x1) || !(( x & (0xF)) ^ 0x2) || !(( x & (0xF)) ^ 0x3) || !(( x & (0xF)) ^ 0x4) || !(( x & (0xF)) ^ 0x5) || !(( x & (0xF)) ^ 0x6) || !(( x & (0xF)) ^ 0x7) || !(( x & (0xF)) ^ 0x8) || !(( x & (0xF)) ^ 0x9));
+ 
+    return first_digit_check & second_digit_check;
 
-/* Alternative solution 
+/* Correct solution 
   int lowerBound = 0x30;
   int upperBound = 0x3a;
   
   //Dissection by part
 
-  printf("%d\n", ~lowerBound + 1); //First negate it + 1 to get back into the actual negate(lowerbound)
-  printf("%d\n", !((x + (~lowerBound + 1)) >> 31)); //If it is smaller than lower bound, x + (~lowerBound + 1) 
-                                                      will be a negative number meaning the MSB will be 1 => !1 = 0
-  printf("%d\n", (x + (~upperBound + 1)) >> 31 );   //Similarly, if it is greater than the upper bound, x + (~upperBound + 1) 
-                                                      will be a positive number meaning the MSB will be 0
+  //printf("%d\n", ~lowerBound + 1); //First negate it + 1 to get back into the actual negate(lowerbound)
+  //printf("%d\n", !((x + (~lowerBound + 1)) >> 31)); //If it is smaller than lower bound, x + (~lowerBound + 1) 
+                                                      //will be a negative number meaning the MSB will be 1 => !1 = 0
+  //printf("%d\n", (x + (~upperBound + 1)) >> 31 );   //Similarly, if it is greater than the upper bound, x + (~upperBound + 1) 
+                                                      //will be a positive number meaning the MSB will be 0
   
-  return !((x + (~lowerBound + 1)) >> 31) & (x + (~upperBound + 1)) >> 31; 
-*/
+  return !((x + (~lowerBound + 1)) >> 31) & (x + (~upperBound + 1)) >> 31; */
+
 }
 /* 
  * conditional - same as x ? y : z 
@@ -229,13 +236,14 @@ int isAsciiDigit(int x) {
  *   Max ops: 16
  *   Rating: 3
  */
-int conditional(int x, int y, int z) {
 
+int conditional(int x, int y, int z) {
+  //Correct
   int a = !!x;    //Confirm whether x is 0 (false) or any other number (true)
   int b = ~a + 1; //Set or clear bits 
-                  /*If we started with 0, then flipping the bits gives all ones. 
-                  When we add one, all those turn back to zeros (and the carry gets set, but we ignore it).
-                  If we started with 1, flipping the bits gives 111...10. Adding 1 turns that last 0 to a 1, so all the bits are now 1's */
+                  //If we started with 0, then flipping the bits gives all ones. 
+                  //When we add one, all those turn back to zeros (and the carry gets set, but we ignore it).
+                  //If we started with 1, flipping the bits gives 111...10. Adding 1 turns that last 0 to a 1, so all the bits are now 1's
   return (b & y) | (~b & z);
 }
 /* 
@@ -245,9 +253,21 @@ int conditional(int x, int y, int z) {
  *   Max ops: 24
  *   Rating: 3
  */
+//Need more attention: DID NOT FIGURE THIS OUT ON MY OWN
 int isLessOrEqual(int x, int y) {
-  return (((x + (~y + 1)) >> 31) || !(x^y));
+  /* My first Attempt: Failed at 
+  ERROR: Test isLessOrEqual(-2147483648[0x80000000],2147483647[0x7fffffff]) failed...
+  ...Gives 0[0x0]. Should be 1[0x1]
+  return (((x + (~y + 1)) >> 31) || !(x^y)); 
+  */
   
+  //Correct solution below
+  int mask = 1 << 31;
+  int x_sign = !!(x & mask); //negative if 1; positive if 0
+  int y_sign = !!(y & mask);
+  int same_sign = !(x_sign ^ y_sign);
+  int le = !( ((~x + 1) + y) & mask); //(~x+1) => negate => if x <= y, ((~x + 1) + y) is negative => & mask will be 1 => ! all that will be 0
+  return (x_sign & !y_sign) | (same_sign & le);
 }
 //4
 /* 
@@ -259,8 +279,9 @@ int isLessOrEqual(int x, int y) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
+  //Correct
   x = (x | (~x + 1)) >> 31; // (~x + 1): similar to negate; (x | (~x + 1)) set all bits to 1 (unless it is orginally 0); In C, right shift is arithmetic
-  printf("%X\n",x);
+  //printf("%X\n",x);
   return ~x & 1;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
@@ -277,35 +298,37 @@ int logicalNeg(int x) {
  */
 
 //Need more attention: DID NOT FIGURE THIS OUT ON MY OWN
+
 int howManyBits(int x) {
+  //Correct
   int n = 0;
-    printf("%X\n", x);
-    printf("(x >> 31): %X\n", (x >> 31));
+    //printf("%X\n", x);
+    /*printf("(x >> 31): %X\n", (x >> 31));*/
     x = x ^ (x >> 31);
-    printf("x ^ (x >> 31): %X\n", x);
-    printf("x >> (n + 16): %X\n", x >> (n + 16));
-    printf("(!!(x >> (n + 16))): %X\n", (!!(x >> (n + 16))));
-    printf("((!!(x >> (n + 16))) << 4): %X\n", ((!!(x >> (n + 16))) << 4));
+    //printf("x ^ (x >> 31): %X\n", x);
+    //printf("x >> (n + 16): %X\n", x >> (n + 16));
+    //printf("(!!(x >> (n + 16))): %X\n", (!!(x >> (n + 16))));
+    //printf("((!!(x >> (n + 16))) << 4): %X\n", ((!!(x >> (n + 16))) << 4));
     
     n = n + ((!!(x >> (n + 16))) << 4);
     
-    printf("x >> (n + 8): %X\n", x >> (n + 8));
-    printf("((!!(x >> (n + 8))) << 3): %X\n", ((!!(x >> (n + 8))) << 3));
+    //printf("x >> (n + 8): %X\n", x >> (n + 8));
+    //printf("((!!(x >> (n + 8))) << 3): %X\n", ((!!(x >> (n + 8))) << 3));
     n = n + ((!!(x >> (n + 8))) << 3);
    
-    printf("x >> (n + 4): %X\n", x >> (n + 4));
-    printf("((!!(x >> (n + 4))) << 2): %X\n", ((!!(x >> (n + 4))) << 2));
+    //printf("x >> (n + 4): %X\n", x >> (n + 4));
+    //printf("((!!(x >> (n + 4))) << 2): %X\n", ((!!(x >> (n + 4))) << 2));
     n = n + ((!!(x >> (n + 4))) << 2);
     
-    printf("x >> (n + 2): %X\n", x >> (n + 2));
-    printf("((!!(x >> (n + 2))) << 1): %X\n", ((!!(x >> (n + 2))) << 1));
+    //printf("x >> (n + 2): %X\n", x >> (n + 2));
+    //printf("((!!(x >> (n + 2))) << 1): %X\n", ((!!(x >> (n + 2))) << 1));
     n = n + ((!!(x >> (n + 2))) << 1);
     
-    printf("x >> (n + 1): %X\n", x >> (n + 1));
-    printf("((!!(x >> (n + 1)))): %X\n", ((!!(x >> (n + 1)))));
+    //printf("x >> (n + 1): %X\n", x >> (n + 1));
+    //printf("((!!(x >> (n + 1)))): %X\n", ((!!(x >> (n + 1)))));
     n = n + ((!!(x >> (n + 1))));
     
-    printf("n + (x >> n): %X\n", n + (x >> n));
+    //printf("n + (x >> n): %X\n", n + (x >> n));
     n = n + (x >> n);
     return n + 1;
 }
@@ -323,10 +346,10 @@ int howManyBits(int x) {
  */
 //Need more attention: DID NOT FIGURE THIS OUT ON MY OWN
 unsigned floatScale2(unsigned uf) {
-
+  //Correct
   //These are specific numbers chosen to extract the '1's in the sign / exp / frac fields
   unsigned sign = uf & 0x80000000;
-  unsigned exp = uf & 0x07f80000;
+  unsigned exp = uf & 0x7f800000;
   unsigned frac = uf & 0x007FFFFF;
 
   //zero or denorm (small fraction)
@@ -335,7 +358,7 @@ unsigned floatScale2(unsigned uf) {
   }
 
   //special case: infinity / NaN
-  if (exp == 0x07f80000){  //exp field is all '1's => special case
+  if (exp == 0x7f800000){  //exp field is all '1's => special case
     return uf;
   }
 
@@ -362,20 +385,17 @@ unsigned floatScale2(unsigned uf) {
  */
 //TBD
 int floatFloat2Int(unsigned uf) {
-  unsigned sign = uf & 0x80000000;
-  unsigned exp = uf & 0x07f80000;
-  unsigned frac = uf & 0x007FFFFF;
-
-  if(exp == 0){
-    return sign | frac;
-  }
-
-  //infinity ; 2147483648 => if it is changed to sign, it overflows
-  if ((exp == 0x07f80000)|| ((exp == 0x4F000000) && (frac == 0x00000000))){
-    return 0x80000000u;
-  }
-
-  return sign | exp | frac;
+  //Correct Solution from the Internet, still don't quite understand the mechanism
+   int sign = uf >> 31, exp = ((uf >> 23) & 0xff) - 127, frac = (uf & 0x007fffff) | 0x00800000, value = 0;
+    if (exp < 0)
+        return 0;
+    if (exp > 30) //exp field is 1111 1111 => Infinity / NaN
+        return 0x80000000; 
+    if (exp < 23)
+        value = frac >> (23 - exp);
+    else if (exp > 23)
+        value = frac << (exp - 23);
+    return sign ? -value : value;
 }
 /* 
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
@@ -391,6 +411,19 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
+  //Online solution also timeout:
+  if (x < -149)
+        return 0;
+    // denorm
+    if (x < -126)
+        return 1 << (149 + x);
+    // norm
+    if (x < 128)
+        return (x + 127) << 23;
+    // inf
+    return 0x7f800000;
+  
+  /* My solution below timeout 
   unsigned sign = 0x00000000;
   unsigned exp = 0x3F800000;
   unsigned frac = 0x00000000;
@@ -411,14 +444,12 @@ unsigned floatPower2(int x) {
     exp = 0x00000000;
     frac = 0x007FFFFF;
     x = -x - 127;
-    printf("%d\n",x);
+    //printf("%d\n",x);
     frac = frac >> x;
-    printf("%X\n",frac);
-
+    //printf("%X\n",frac);
   } else {
     exp = (((exp >> 23) + x) << 23);
   }
 
-  return sign | exp | frac;
-
+  return sign | exp | frac; */
 }

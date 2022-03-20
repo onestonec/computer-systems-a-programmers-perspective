@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /afs/cs/academic/class/15213-f15/www/code/09-machine-advanced</title>
+ </head>
+ <body>
+<h1>Index of /afs/cs/academic/class/15213-f15/www/code/09-machine-advanced</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/afs/cs/academic/class/15213-f15/www/code/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gadget.c">gadget.c</a></td><td align="right">2015-09-22 10:43  </td><td align="right">168 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="README.txt">README.txt</a></td><td align="right">2015-09-29 15:20  </td><td align="right">525 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="stack.c">stack.c</a></td><td align="right">2015-09-28 15:33  </td><td align="right">548 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="bufdemo.c">bufdemo.c</a></td><td align="right">2015-08-10 15:19  </td><td align="right">597 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Makefile">Makefile</a></td><td align="right">2015-08-10 15:41  </td><td align="right">832 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="locate.c">locate.c</a></td><td align="right">2015-08-10 14:10  </td><td align="right">966 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="locate32.c">locate32.c</a></td><td align="right">2015-09-21 16:16  </td><td align="right">968 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bufdemo.64ns">bufdemo.64ns</a></td><td align="right">2015-08-11 12:34  </td><td align="right">1.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bufdemo.64s">bufdemo.64s</a></td><td align="right">2015-08-11 12:34  </td><td align="right">2.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="stack32">stack32</a></td><td align="right">2015-09-28 15:33  </td><td align="right">7.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="stack">stack</a></td><td align="right">2015-09-28 15:33  </td><td align="right">8.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="locate64">locate64</a></td><td align="right">2015-09-28 15:20  </td><td align="right">8.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bufdemo-nsp">bufdemo-nsp</a></td><td align="right">2015-08-11 12:34  </td><td align="right">8.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bufdemo-sp">bufdemo-sp</a></td><td align="right">2015-08-11 12:34  </td><td align="right">8.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gadget.64d">gadget.64d</a></td><td align="right">2015-09-22 10:43  </td><td align="right">8.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bufdemo.64nd">bufdemo.64nd</a></td><td align="right">2015-08-11 12:34  </td><td align="right"> 12K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bufdemo.64d">bufdemo.64d</a></td><td align="right">2015-08-11 12:34  </td><td align="right"> 13K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="locate-all.xlsx">locate-all.xlsx</a></td><td align="right">2015-08-11 11:59  </td><td align="right"> 52K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="locate-static">locate-static</a></td><td align="right">2015-09-21 16:16  </td><td align="right">744K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="locate-static.d">locate-static.d</a></td><td align="right">2015-09-21 16:20  </td><td align="right">7.6M</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.18 (Ubuntu) Server at www.cs.cmu.edu Port 80</address>
+</body></html>

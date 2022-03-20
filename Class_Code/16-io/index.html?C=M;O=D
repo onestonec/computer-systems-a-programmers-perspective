@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /afs/cs/academic/class/15213-f15/www/code/16-io</title>
+ </head>
+ <body>
+<h1>Index of /afs/cs/academic/class/15213-f15/www/code/16-io</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/afs/cs/academic/class/15213-f15/www/code/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ffiles3">ffiles3</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 66K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ffiles2">ffiles2</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 66K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="statcheck">statcheck</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 66K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="hello">hello</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 65K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ffiles1">ffiles1</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 66K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="csapp.o">csapp.o</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 81K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="cpstdin">cpstdin</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 65K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="cpfile">cpfile</a></td><td align="right">2015-10-22 09:30  </td><td align="right"> 65K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Makefile">Makefile</a></td><td align="right">2015-10-22 09:20  </td><td align="right">341 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="README.txt">README.txt</a></td><td align="right">2015-08-17 17:04  </td><td align="right">291 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="statcheck.c">statcheck.c</a></td><td align="right">2015-07-07 15:31  </td><td align="right">646 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="hello.c">hello.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right">191 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ffiles3.out">ffiles3.out</a></td><td align="right">2015-07-07 15:30  </td><td align="right"> 11 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ffiles3.c">ffiles3.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right">440 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ffiles2.c">ffiles2.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right">436 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ffiles1.c">ffiles1.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right">444 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="csapp.h">csapp.h</a></td><td align="right">2015-07-07 15:30  </td><td align="right">5.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="csapp.c">csapp.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right"> 17K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="cpstdin.c">cpstdin.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right">179 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="cpfile.c">cpfile.c</a></td><td align="right">2015-07-07 15:30  </td><td align="right">339 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="abcde.txt">abcde.txt</a></td><td align="right">2015-07-07 15:30  </td><td align="right">  5 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.18 (Ubuntu) Server at www.cs.cmu.edu Port 80</address>
+</body></html>

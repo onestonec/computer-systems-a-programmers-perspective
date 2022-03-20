@@ -33,6 +33,8 @@ void proc (union ele *up) {
 }
 ```
 
+Solution: `up->e2.x = *(*(up->e2.next)->e1.p) - *(up->e2.next).e1.y`
+
 On the basis of this information, fill in the missing expressions in the code for proc.
 Hint: Some union references can have ambiguous interpretations. These ambiguities get resolved as you see where the references lead. There is only one answer that does not perform any casting and does not violate any type constraints. 
 
